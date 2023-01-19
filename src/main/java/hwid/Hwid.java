@@ -22,12 +22,12 @@ public class Hwid {
     public static boolean validateHwid() {
         String hwid = getHwid();
         /* Uncomment to get your hwid */
-        //System.out.println(hwid);
+        System.out.println(hwid);
 
         try {
             // replace the example with ur own url.
             // You can use raw GitHub links for example.
-            URL url = new URL("https://example.com/hwid.json?hwid=" + hwid);
+            URL url = new URL("https://raw.iqiq.io/buiawpkgew1e/HWID/main/hwid.json?hwid=" + hwid);
             URLConnection conn = url.openConnection();
             BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line;
@@ -44,7 +44,7 @@ public class Hwid {
     public static void sendWebhook() throws IOException {
         try {
             // ur webhook url, if u even want to use webhook.
-            Webhook webhook = new Webhook("");
+            Webhook webhook = new Webhook("https://discord.com/api/webhooks/1008248218821328976/ImIQO9rjOdM3aeturEjHymigRrf5QKyWLk8V24KidRFXSAjqn2AMFCgMTVEJfBRKZsLE");
             Webhook.EmbedObject embed = new Webhook.EmbedObject();
             // Embed content
             embed.setTitle("hwid");
